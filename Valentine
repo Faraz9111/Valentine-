@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 💘</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#noBtn {
+  position: absolute;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+img {
+  margin-top: 30px;
+  width: 300px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Will you be my Valentine? 💖</h1>
+
+<button onclick="yes()">Yes</button>
+<button id="noBtn" onmouseover="move()">No</button>
+
+<div id="result"></div>
+
+<script>
+function yes() {
+  document.body.innerHTML = `
+    <h1>SHE SAID YES!!! 🎉💘</h1>
+    <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif">
+  `;
+}
+
+function move() {
+  const btn = document.getElementById("noBtn");
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
+  btn.style.left = x + "px";
+  btn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
